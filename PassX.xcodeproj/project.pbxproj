@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		D223CA272A53AF1B0079099D /* PassX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PassX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D223CA2A2A53AF1B0079099D /* PassXApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassXApp.swift; sourceTree = "<group>"; };
-		D223CA2C2A53AF1B0079099D /* PassX Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PassX Main.swift"; sourceTree = "<group>"; };
+		D223CA2C2A53AF1B0079099D /* PassX Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PassX Main.swift"; sourceTree = "<group>"; tabWidth = 4; };
 		D223CA2E2A53AF1C0079099D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D223CA312A53AF1C0079099D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D223CA372A53AF1C0079099D /* PassXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
