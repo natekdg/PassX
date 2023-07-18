@@ -12,7 +12,8 @@ struct PasscodeGeneratorView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color.black.edgesIgnoringSafeArea(.all)
+                Color.black
+                .edgesIgnoringSafeArea(.all)
                 
                 VStack(spacing: 16) {
                     List {
@@ -39,8 +40,7 @@ struct PasscodeGeneratorView: View {
                             .frame(width: 398.0/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/92.0)
                             .background(Color.black)
                             .cornerRadius(0)
-                            .scaleEffect(isPasscodeAnimating ? 0.9 : 1.0)
-                            .animation(.easeInOut(duration: 0.25))
+                            .animation(.easeInOut(duration: 0.35))
                     }
                     
                     
@@ -150,21 +150,28 @@ struct SavedPasswordsView: View {
     var body: some View {
         NavigationView {
             List {
+                
                 ForEach(savedPasswords, id: \.self) { password in
                     Text(password)
+                        .foregroundColor(.orange)
+                        .listRowBackground(Color.black) // Sets the background of each list to be black
                 }
                 .onDelete(perform: deletePassword)
             }
+            .listStyle(DefaultListStyle())
             .navigationBarTitle("Saved Passwords")
+            .foregroundColor(.orange)
+            .navigationBarTitleDisplayMode(.inline)
         }
         .navigationViewStyle(StackNavigationViewStyle())
-    }
+        .foregroundColor(.orange)    }
 
     private func deletePassword(at offsets: IndexSet) {
         savedPasswords.remove(atOffsets: offsets)
     }
 }
-    
+
+
     
     struct ContentView: View {
         var body: some View {
