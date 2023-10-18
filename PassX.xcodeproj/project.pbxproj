@@ -101,6 +101,7 @@
 			children = (
 				D223CA2A2A53AF1B0079099D /* PassXApp.swift */,
 				D223CA2C2A53AF1B0079099D /* PassX Main.swift */,
+				D2A3D9A02ADF9CD4001E1A96 /* Image Assets */,
 				D223CA2E2A53AF1C0079099D /* Assets.xcassets */,
 				D223CA442A53AF1C0079099D /* PassXUITests */,
 				D223CA302A53AF1C0079099D /* Preview Content */,
@@ -133,6 +134,13 @@
 				D223CA3A2A53AF1C0079099D /* PassXTests */,
 			);
 			path = PassXUITests;
+			sourceTree = "<group>";
+		};
+		D2A3D9A02ADF9CD4001E1A96 /* Image Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Image Assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
