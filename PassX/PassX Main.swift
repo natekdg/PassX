@@ -17,7 +17,7 @@ struct PasscodeGeneratorView: View {
                 
                 VStack(spacing: 16) {
                     List {
-                        Section(header: Text("Options").font(.headline).fontWeight(.regular).foregroundColor(.orange)) {
+                        Section(header: Text("Options").font(.headline).fontWeight(.regular).foregroundColor(.white)) {
                             OptionsView(useLongPasscode: $useLongPasscode, clearPasscode: $clearPasscode, passcode: $passcode) // options grid
                         }
                     }
@@ -25,15 +25,14 @@ struct PasscodeGeneratorView: View {
                     
                     VStack { // Wrap the text and passcode in a VStack
                         Text("Your Passcode")
-                            .font(.title3)
-                            .fontWeight(.semibold)
-                            .foregroundColor(.orange)
+                            .font(.custom("Helvetica.ttc", size: 30))
+                            .fontWeight(.bold)
+                            .foregroundColor(.white)
                             .frame(height: 29.0) // fixed height
                             .padding(.bottom, 16) // bottom padding
                         
                         Text(passcode) //generated passsword text
-                            .font(.title)
-                            .font(.title)
+                            .font(.custom("Helvetica.ttc", size: 20))
                             .fontWeight(.semibold)
                             .foregroundColor(.white)
                             .padding(.bottom, 6.0)
@@ -51,6 +50,7 @@ struct PasscodeGeneratorView: View {
                             Image(systemName: "list.bullet")
                                 .font(.title)
                                 .foregroundColor(.orange)
+                                .foregroundColor(.orange)
                         }
                         .sheet(isPresented: $showSavedPasswords) {
                             SavedPasswordsView(savedPasswords: $savedPasswords)
@@ -67,13 +67,13 @@ struct PasscodeGeneratorView: View {
                             savePasscode()
                         }) {
                             Text("Generate") // button ui
-                                .font(.title)
+                                .font(.custom("Helvetica.ttc", size: 30))
                                 .fontWeight(.semibold)
                                 .foregroundColor(.white)
                                 .padding(.horizontal, 13.0)
-                                .padding(.vertical, 9.0)
-                                .background(Color.orange)
-                                .cornerRadius(8)
+                                .padding(.vertical, 15)
+                                .background(LinearGradient(gradient: Gradient(colors: [Color.teal, Color.purple]), startPoint: /*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/, endPoint: /*@START_MENU_TOKEN@*/.trailing/*@END_MENU_TOKEN@*/))
+                                .cornerRadius(20)
                         }
                         
                         Spacer()
@@ -129,9 +129,9 @@ struct PasscodeGeneratorView: View {
             Toggle(isOn: $useLongPasscode) {
                 Text("20 Characters")
                     .font(.title)
-                    .foregroundColor(.orange)
+                    .foregroundColor(.white)
             }
-            .toggleStyle(SwitchToggleStyle(tint: .orange))
+            .toggleStyle(SwitchToggleStyle(tint: .purple))
             .onChange(of: useLongPasscode) { newValue in
                 clearPasscode = true
             }

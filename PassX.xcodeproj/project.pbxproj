@@ -14,6 +14,9 @@
 		D223CA2F2A53AF1C0079099D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D223CA2E2A53AF1C0079099D /* Assets.xcassets */; };
 		D223CA322A53AF1C0079099D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D223CA312A53AF1C0079099D /* Preview Assets.xcassets */; };
 		D223CA3C2A53AF1C0079099D /* PassXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D223CA3B2A53AF1C0079099D /* PassXTests.swift */; };
+		D2B2FFC52AE0CCE50097D465 /* Helvetica.ttc in Resources */ = {isa = PBXBuildFile; fileRef = D2B2FFC42AE0CCE50097D465 /* Helvetica.ttc */; };
+		D2B2FFC62AE0CCE50097D465 /* Helvetica.ttc in Resources */ = {isa = PBXBuildFile; fileRef = D2B2FFC42AE0CCE50097D465 /* Helvetica.ttc */; };
+		D2B2FFC72AE0CCE50097D465 /* Helvetica.ttc in Resources */ = {isa = PBXBuildFile; fileRef = D2B2FFC42AE0CCE50097D465 /* Helvetica.ttc */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,7 @@
 		D223CA412A53AF1C0079099D /* PassXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PassXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D223CA452A53AF1C0079099D /* PassXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassXUITests.swift; sourceTree = "<group>"; };
 		D223CA472A53AF1C0079099D /* PassXUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassXUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D2B2FFC42AE0CCE50097D465 /* Helvetica.ttc */ = {isa = PBXFileReference; lastKnownFileType = file; name = Helvetica.ttc; path = ../../../../../../System/Library/Fonts/Helvetica.ttc; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,13 +75,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		43E049E82A5B64E10020B104 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		D223CA1E2A53AF1B0079099D = {
 			isa = PBXGroup;
 			children = (
@@ -103,9 +100,9 @@
 				D223CA2C2A53AF1B0079099D /* PassX Main.swift */,
 				D2A3D9A02ADF9CD4001E1A96 /* Image Assets */,
 				D223CA2E2A53AF1C0079099D /* Assets.xcassets */,
+				D2B2FFC42AE0CCE50097D465 /* Helvetica.ttc */,
 				D223CA442A53AF1C0079099D /* PassXUITests */,
 				D223CA302A53AF1C0079099D /* Preview Content */,
-				43E049E82A5B64E10020B104 /* Fonts */,
 			);
 			path = PassX;
 			sourceTree = "<group>";
@@ -249,6 +246,7 @@
 			files = (
 				D223CA322A53AF1C0079099D /* Preview Assets.xcassets in Resources */,
 				D223CA2F2A53AF1C0079099D /* Assets.xcassets in Resources */,
+				D2B2FFC52AE0CCE50097D465 /* Helvetica.ttc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B2FFC62AE0CCE50097D465 /* Helvetica.ttc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +262,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D2B2FFC72AE0CCE50097D465 /* Helvetica.ttc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +435,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PassX/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PassX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -463,6 +464,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PassX/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PassX/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
