@@ -58,10 +58,12 @@ struct PasscodeGeneratorView: View {
                         Button(action: {
                             showSavedPasswords.toggle()
                         }) {
-                            Image(systemName: "list.bullet")
+                            Image(systemName: "list.bullet")            // code for list icon on the left side
                                 .font(.title)
-                                .foregroundColor(.orange)
-                                .foregroundColor(.orange)
+                                .mask(LinearGradient(
+                                    gradient: Gradient(colors: [Color(red: 0.2, green: 0.5, blue: 0.2), Color(red: 0.4, green: 0.8, blue: 0.4)]),
+                                    startPoint: .leading,
+                                    endPoint: .trailing))
                         }
                         .sheet(isPresented: $showSavedPasswords) {
                             SavedPasswordsView(savedPasswords: $savedPasswords)
@@ -73,18 +75,20 @@ struct PasscodeGeneratorView: View {
                             .frame(width: 61.0)
                         
                         Button(action: {
-                            generatePasscode() // actions for button
-                            animateButton()
-                            savePasscode()
+                            generatePasscode()          // actions for button
+                            animateButton()         // actions for button
+                            savePasscode()          // actions for button
                         }) {
-                            Text("Generate") // button UI
+                            Text("Generate")            // button UI
                                 .font(.custom("Helvetica.ttc", size: 30))
                                 .fontWeight(.semibold)
                                 .foregroundColor(.white)
                                 .padding(.horizontal, 25)
-                                .padding(.vertical, 15)
-                                .background(LinearGradient(gradient: Gradient(colors: [Color.teal, Color.purple]), startPoint: .leading, endPoint: .trailing))
-                                .opacity(20) // Adjusted opacity value
+                                .padding(.vertical, 17)
+                                .background(LinearGradient(
+                                    gradient: Gradient(colors: [Color(red: 0.2, green: 0.5, blue: 0.2), Color(red: 0.4, green: 0.8, blue: 0.4)]),
+                                    startPoint: .leading,
+                                    endPoint: .trailing))
                                 .cornerRadius(15)
                         }
                         .padding(.trailing, 12.0) // This shifts the button to the left
@@ -145,8 +149,9 @@ struct PasscodeGeneratorView: View {
                 Text("20 Characters")
                     .font(.custom("Helvetica.ttc", size: 23))
                     .foregroundColor(.white)
+                
             }
-            .toggleStyle(SwitchToggleStyle(tint: .purple))
+            .toggleStyle(SwitchToggleStyle(tint: Color(red: 0.2, green: 0.5, blue: 0.2)))
             .onChange(of: useLongPasscode) { newValue in
                 clearPasscode = true
             }
@@ -177,13 +182,20 @@ struct SavedPasswordsView: View {
             .listStyle(DefaultListStyle())
             .navigationBarTitle("Saved Passwords")
             .foregroundColor(.white)
+            .padding(.top)
+            
             .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(leading: Button("Delete All", action: deleteAllPasswords))
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .foregroundColor(.orange)    }
 
     private func deletePassword(at offsets: IndexSet) {
         savedPasswords.remove(atOffsets: offsets)
+    }
+    
+    private func deleteAllPasswords() {
+        savedPasswords.removeAll()
     }
 }
 
