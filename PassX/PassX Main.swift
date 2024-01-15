@@ -139,7 +139,7 @@ struct PasscodeGeneratorView: View {
         
     }
     
-    struct OptionsView: View {
+    struct OptionsView: View {          // for custom defined view
         @Binding var useLongPasscode: Bool
         @Binding var clearPasscode: Bool
         @Binding var passcode: String
@@ -186,6 +186,8 @@ struct SavedPasswordsView: View {
             
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarItems(leading: Button("Delete All", action: deleteAllPasswords))
+            .font(.custom("Helvetica.ttc", size: 16))
+            .foregroundColor(.white)
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .foregroundColor(.orange)    }
